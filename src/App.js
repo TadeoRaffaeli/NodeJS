@@ -1,13 +1,20 @@
-import CustomNavbar from './components/CustomNavbar';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
-import './App.css'
+import CustomNavbar from './components/CustomNavbar';
+import './App.css';
+
 
 const App = () => {
   return (
-    <div>
-    <CustomNavbar />
-    <ItemListContainer mensaje="Hola ItemListContainer"/>
-    </div>
+    <BrowserRouter>
+    <CustomNavbar /> 
+    <Routes>
+    <Route path='/' element={<ItemListContainer />} />
+          <Route path='/cat/:cat' element={<ItemListContainer />} />
+          <Route path='/item/:idItem' element={<ItemDetailContainer />} />
+    </Routes>
+    </BrowserRouter>
   )
 }
 

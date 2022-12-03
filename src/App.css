@@ -2,7 +2,6 @@
   flex-direction: column;
   height: 25%;
 }
-
 .titulo{
   color: red
 }
@@ -12,6 +11,7 @@
 header{
   height: 25%;
   background-color: rgb(90, 90, 226);
+  color: whitesmoke;
 }
 .logo{
   text-align: left;
@@ -57,8 +57,8 @@ header{
   margin-left: 0%;
 }
 #imgLogo{
-  height: 80px;
-  width: 80px;
+  height: 110px;
+  width: 140px;
 }
 .svg, .iconocarro, .path{
   height: 40px;

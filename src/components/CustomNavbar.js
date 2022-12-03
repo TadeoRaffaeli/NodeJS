@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from "react-router-dom";
 import { FaCartPlus } from 'react-icons/fa';
 
 
@@ -8,21 +9,21 @@ const CustomNavbar = () => {
         <header>
         <Navbar id='navi'>
       <Container id='bob'>
-        <img src={process.env.PUBLIC_URL + '/logo.png'} id='imgLogo' alt='Logo'/>
-        <Navbar.Brand className='filtro1'>Proteinas</Navbar.Brand>
-        <Navbar.Brand className='filtro2'>Creatina</Navbar.Brand>
-        <Navbar.Brand className='filtro3'>Vitaminas</Navbar.Brand>
+        <Link to='/'><img src={process.env.PUBLIC_URL + '/logo.png'} id='imgLogo' alt='Logo' /></Link>
+        <Navbar.Brand className='filtro1'><Link to='/cat/proteina' style ={{color: 'whitesmoke'}}>Proteinas</Link></Navbar.Brand>
+        <Navbar.Brand className='filtro2'><Link to='/cat/creatina' style ={{color: 'whitesmoke'}}>Creatina</Link></Navbar.Brand>
+        <Navbar.Brand className='filtro3'><Link to='/cat/vitamina' style ={{color: 'whitesmoke'}}>Vitaminas</Link></Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text className='signIn'>
-           <a  href="#login">Sign In</a>
+           <a  style ={{color: 'whitesmoke'}} href="#login">Sign In</a>
           </Navbar.Text>
           <Navbar.Text className='login'>
-           <a  href="#login">Register</a>
+           <a  style ={{color: 'whitesmoke'}} href="#login">Register</a>
           </Navbar.Text>
           
         </Navbar.Collapse>
-        <FaCartPlus className='iconoCarro'/>
+        <FaCartPlus style ={{fontSize: '2.5rem'}}className='iconoCarro'/>
       </Container>
     </Navbar>
         </header>
