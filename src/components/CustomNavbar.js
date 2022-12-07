@@ -23,7 +23,7 @@ const CustomNavbar = () => {
           </Navbar.Text>
           
         </Navbar.Collapse>
-        <FaCartPlus style ={{fontSize: '2.5rem'}}className='iconoCarro'/>
+        <Link className='iconoCarro' style={{color: 'white'}} to='/cart' ><FaCartPlus style ={{fontSize: '2.5rem'}}/></Link>
       </Container>
     </Navbar>
         </header>

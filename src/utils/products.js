@@ -67,15 +67,48 @@ const products = [
     },
     {
       id: 7,
-      nombre: "Vitamina Zink",
-      precio: 5000,
-      stock: 15,
+      nombre: "Multivitaminico 60 comprimidos- Body Advance",
+      precio: 1200,
+      stock: 90,
       image: [
-          "https://d3ugyf2ht6aenh.cloudfront.net/stores/306/768/products/creatina-gold1-6644a4a71eb95c3c3a16486513473245-1024-1024.png"
+          "https://i0.wp.com/laduvalina.com.ar/wp-content/uploads/2022/09/Sin-titulo.png?fit=1024%2C1024&ssl=1"
         ],
-      description: "PlaceHolder Vitamina",
+      description: "Su fórmula equilibrada, testeada y de rápida asimilación ayuda a aumentar el rendimiento, la energía y eleva naturalmente el sistema inmunológico. Su consumo aumenta la ingesta de nutrientes, permitiendo que las personas obtengan mayor cantidad de vitaminas y minerales cuando no pueden cubrir estas necesidades sólo con alimentos.",
       cat: "vitamina"
   },
+  {
+    id: 8,
+    nombre: "Vitamina C + D + Zinc",
+    precio: 800,
+    stock: 240,
+    image: [
+        "https://farmacityar.vteximg.com.br/arquivos/ids/214544-1000-1000/223719_suplemento-dietario-pure-wellness-vitamina-c-triaccion-x-30-comp_imagen-1.jpg?v=637665304373330000"
+      ],
+    description: "Ayuda a mantener el sistema inmunológico saludable. Suplemento dietario en polvo dietético, a base de vitamiva c, d, zinc, sabor naranja.Libre de gluten.",
+    cat: "vitamina"
+},
+{
+  id: 9,
+  nombre: "Multi-Vitamin 60 comprimidos- Gentech",
+  precio: 1299,
+  stock: 145,
+  image: [
+      "https://desuplementos.com/wp-content/uploads/2019/12/GENTECH-MULTI-VITAMIN-LADO-1-copia-504x504.jpg"
+    ],
+  description: "Potente multivitamínico que aporta las vitaminas y minerales necesarios en los procesos metabólicos, es decir transforma lo que comes en energía para realizar actividades, recuperarte más rápido y atenuar el agotamiento. Las vitaminas son compuestos orgánicos, que aunque en cantidades muy pequeñas, son esenciales. Debemos obtenerlas a través de los alimentos que ingerimos. Los minerales actúan como cofactores en el metabolismo corporal y están en todas las reacciones bioquímicas.",
+  cat: "vitamina"
+},
+{
+  id: 10,
+  nombre: "Vitamina B- Vita Tech",
+  precio: 2100,
+  stock: 42,
+  image: [
+      "https://http2.mlstatic.com/D_NQ_NP_836484-MLA32880134584_112019-O.jpg"
+    ],
+  description: "Complejo B de Vitatech, está compuesto por una larga serie de vitaminas de la familia de las “B” que trabajan en conjunto para respaldar el funcionamiento saludable del corazón y del sistema nervioso, mientras que proveen de una nutrición necesaria para enfrentar el stress de la vida diaria y para la manutención de una función metabólica apropiada.",
+  cat: "vitamina"
+},
 ];
 
 module.exports = {
