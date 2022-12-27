@@ -9,23 +9,23 @@ const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
     const { cat } = useParams();
 
-
+   
     useEffect(() => {
         const fetchFromFirestore = async() => {
         
         const querySnapshot = await getDocs(collection(db, "products"));
-        querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    });
+        const list = querySnapshot.docs.map((producto)=>{
+          return{
+            id:producto.id,
+            ...producto.data()
+          }
+        })
+        setDatos(list)
 }
 fetchFromFirestore ()
-    }, [cat]);
-
-    useEffect(() => {
-        return (() => {
-            setDatos([]);
-        })
     }, []);
+
+ 
     
     return (
         <>  
