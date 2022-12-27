@@ -1,31 +1,32 @@
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
-import { Wrapper } from './styledComponents';
-import customFetch from "../utils/customFetch";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-const { products } = require('../utils/products');
+import { db } from '../utils/firebaseConfig';
+import { collection, getDocs } from "firebase/firestore";
+
 
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
     const { cat } = useParams();
 
-    console.log(cat);
 
-    //componentDidUpdate
     useEffect(() => {
-        customFetch(2000, products.filter(item => {
-            if (cat === undefined) return item;
-            return item.cat === cat
-        }))
-            .then(result => setDatos(result))
-            .catch(err => console.log(err))
+        const fetchFromFirestore = async() => {
+        
+        const querySnapshot = await getDocs(collection(db, "products"));
+        querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+    });
+}
+fetchFromFirestore ()
     }, [cat]);
 
-    const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
-    }
-
+    useEffect(() => {
+        return (() => {
+            setDatos([]);
+        })
+    }, []);
+    
     return (
         <>  
             <ItemList items={datos} />

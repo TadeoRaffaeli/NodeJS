@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget";
 import { FaCartPlus } from 'react-icons/fa';
 
 
@@ -23,7 +24,7 @@ const CustomNavbar = () => {
           </Navbar.Text>
           
         </Navbar.Collapse>
-        <Link className='iconoCarro' style={{color: 'white'}} to='/cart' ><FaCartPlus style ={{fontSize: '2.5rem'}}/></Link>
+        <Link className='iconoCarro' style={{color: 'white'}} to='/cart' ><FaCartPlus style ={{fontSize: '2.5rem'}}/><CartWidget /></Link>
       </Container>
     </Navbar>
         </header>

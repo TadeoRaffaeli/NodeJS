@@ -1,15 +1,21 @@
-import { Button } from 'bootstrap';
+import { Button } from '@material-ui/core';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from './styledComponents';
+import { CartContext } from './CartContext';
+import { YoutubeSearchedForTwoTone } from '@material-ui/icons';
 
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
+    const test = useContext(CartContext);
+
+
     const onAdd = (qty) => {
         alert("You have selected " + qty + " items.");
         setItemCount(qty);
+        test.addToCart(item);
     }
 
     return (
