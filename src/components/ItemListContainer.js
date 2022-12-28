@@ -2,7 +2,7 @@ import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { db } from '../utils/firebaseConfig';
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, where, query, orderBy } from "firebase/firestore";
 
 
 const ItemListContainer = () => {
@@ -12,8 +12,13 @@ const ItemListContainer = () => {
    
     useEffect(() => {
         const fetchFromFirestore = async() => {
-        
-        const querySnapshot = await getDocs(collection(db, "products"));
+        let q;
+        if (cat) {
+          q = query(collection(db, 'productos'), where('cat', '==', cat));
+        } else{
+          q = query(collection(db, 'productos'), orderBy('cat'));
+        }
+        const querySnapshot = await getDocs(q);
         const list = querySnapshot.docs.map((producto)=>{
           return{
             id:producto.id,
@@ -23,9 +28,8 @@ const ItemListContainer = () => {
         setDatos(list)
 }
 fetchFromFirestore ()
-    }, []);
+    }, [cat]);
 
- 
     
     return (
         <>  
@@ -35,3 +39,4 @@ fetchFromFirestore ()
 }
 
 export default ItemListContainer;
+
