@@ -2,9 +2,10 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import CustomNavbar from './components/CustomNavbar';
-import './App.css';
+import './Styles/App.css';
 import Cart from "./components/Cart";
 import CartContextProvider from "./components/CartContext";
+
 
 
 const App = () => {

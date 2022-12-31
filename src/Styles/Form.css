@@ -1,0 +1,50 @@
+
+*{
+    text-align: center;
+}
+
+#FormStle{
+    text-align: center;
+}
+.FormDiv{
+    padding: 10px;
+}
+.inputForm{
+    height: 30px;
+    width: 30%;
+}
+.subButton{
+    position: abolute;
+    bottom: 16px;
+    left: 16px;
+}
+.labelForm{
+    color: red;
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #FFF;
+}
+
+.popup-inner .close-btn {
+    position: abolute;
+    bottom: 16px;
+    right: 16px;
+}

@@ -3,10 +3,9 @@ import { useContext } from 'react';
 import { CartContext } from './CartContext';
 
 const CartWidget = () => {
-    const test = useContext(CartContext);
-
+    const CartAmount = useContext(CartContext);
     return (
-        <Badge badgeContent={test.calcItemsQty()} color="secondary">
+        <Badge badgeContent={CartAmount.calcItemsQty()} color="secondary">
         </Badge>
     );
 }

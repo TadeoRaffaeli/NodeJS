@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 
+
 export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
@@ -23,7 +24,8 @@ const CartContextProvider = ({ children }) => {
             setCartList([
                 ...cartList
             ]);
-        }
+            
+        };
     }
     
     const clear = () => {
@@ -50,13 +52,24 @@ const CartContextProvider = ({ children }) => {
     }
 
     const calcTotal = () => {
-        return calcSubTotal();
+        return calcSubTotal() + calcTaxes();
     }
 
     const calcItemsQty = () => {
         let qtys = cartList.map(item => item.qtyItem);
         return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
     }
+
+    const calcEnvio = () => {
+        if(calcSubTotal() != 0){
+        if(calcSubTotal() <= 50000){
+            return 1500
+        }
+        else if(calcSubTotal() > 50000){
+            return 0
+        }
+    }}
+
 
     return (
         <CartContext.Provider value={{
@@ -68,7 +81,8 @@ const CartContextProvider = ({ children }) => {
             calcSubTotal, 
             calcTaxes, 
             calcTotal,
-            calcItemsQty
+            calcItemsQty,
+            calcEnvio,
         }}>
             { children }
         </CartContext.Provider>

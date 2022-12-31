@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useState, useContext } from 'react';
 import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from './styledComponents';
 import { CartContext } from './CartContext';
-import { YoutubeSearchedForTwoTone } from '@material-ui/icons';
+import '../Styles/ItemDetail.css';
 
 
 const ItemDetail = ({ item }) => {
@@ -13,9 +13,8 @@ const ItemDetail = ({ item }) => {
 
 
     const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
         setItemCount(qty);
-        test.addToCart(item);
+        test.addToCart(item, qty);
     }
 
     return (
@@ -29,15 +28,18 @@ const ItemDetail = ({ item }) => {
                         <ImageDetail src={item.image[0]} />
                     </ImgContainer>
                     <InfoContainer>
-                        <Title>{item.nombre}</Title>
-                        <Desc>{item.description}</Desc>
+                        <Title id='FontTitle'>{item.nombre}</Title>
+                        <Desc id='FontDesc'>{item.description}</Desc>
                         <Price>$ {item.precio}</Price>
                         <Desc>{item.stock} unidades en stock</Desc>
                     </InfoContainer>
                     {
                     itemCount === 0
                     ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
-                    : <Link to='/cart' style={{textDecoration: "none"}}><Button variant='contained' color="secondary">Checkout</Button></Link>
+                    : <>
+                    <Link to='/cart' style={{textDecoration: "none"}}><Button variant='contained' color="secondary">Checkout</Button></Link> 
+                    <Link to='/' style={{textDecoration: "none"}}><Button variant='contained' id='ButtonShopping'>Continue Shopping</Button></Link> 
+                    </>
                     }
                 </WrapperDetail>
             </DetailContainer>
