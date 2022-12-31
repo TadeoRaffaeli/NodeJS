@@ -1,70 +1,12 @@
-# Getting Started with Create React App
+This is a project for a React JS course on CoderHouse. The idea behind this is to create a functioning e-commerce that feeds information into FireBase. 
+Some extensions were added in this project, such as SweetAlert 2, in order to alert the customer when the process of buying the products is terminated and the order is created.
+Another extension used was Styled-Component instead of bootstap. This decision was made because throughout the classes all the code was being worked with Styled-Components, and due to lack of times I had to adjust and improvise with this extension. 
+A couple of functionalities are missing, such as being able to enter an email when clicking on Sign In or Register. This is also due to lack of times.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project iscomposed of various folders, such as Components, were all the information required for the logic is held. Styles is also holding all the CSS of the project, each one of them in different pages for easy access. 
+The utilities are under the folder "utils". There you can find the Products (this folder is currently not in use, since all the data was sent into FireBase and the project is now pulling data from there), were you'll be able to find all the products with their Ids, categories, prices, etc.
 
-## Available Scripts
+Lastly, the user can feed his Name, last name and email address to the site before finishing his request to buy items. This was intended to be mapped into firebase and grab that information, but wasn’t able to fulfill this in the short spam of delivery due to national Holidays. 
+I believe that with an extra couple of days this could have been finalized the way it was supposed to, always intended with academic intends and not for any commercial purposes. 
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hope you enjoy going through this project as much as I have enjoyed working on it.
